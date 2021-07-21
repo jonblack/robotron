@@ -16,6 +16,7 @@ the game in an emulator such as [MAME](https://www.mamedev.org/release.html).
   * [Build Robotron:2084](#build-robotron2084)
 * [Play Robotron:2084](#play-robotron2084)
 * [About the source code](#about-the-source-code)
+  * [Changes Required](#changes-required)
 
 <!-- vim-markdown-toc -->
 ## Build Instructions
@@ -71,4 +72,14 @@ https://github.com/historicalsource/robotron. It is the Motorola 6809 assembly l
 source code for the 'Blue Label' version of the game.
 
 The source code for the [sound module](src/VSNDRM3.SRC) was retrieved from https://github.com/historicalsource/williams-soundroms.
+
+### Changes Required
+You can review the changes required to get Robotron to assemble with `asm6809`
+in [this
+commit](https://github.com/mwenge/robotron/commit/f636fd4855eb7fcb719528f12078d8976678b915).
+To avoid more substantial changes I [forked
+`asm6809`](https://github.com/mwenge/asm6809) to allow a lot of equivalent
+instructions from the older 6800 instruction set along with a few other things
+that the assembler used by Eugene Jarvis and his team allowed.
+
 
