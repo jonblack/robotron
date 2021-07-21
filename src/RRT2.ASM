@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  TRANSPORTER.........
 OPOINT  EQU   0
@@ -55,7 +55,7 @@ GLITAB  FDB   GLIT0
         FDB   GLIT6
         FDB   GLIT4
 
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. '
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. "
 
 TRINIT  PSHS  X,Y
         LDX   #TRRAM           ;POINT AT FIRST BLOCK

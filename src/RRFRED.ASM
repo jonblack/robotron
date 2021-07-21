@@ -1,6 +1,6 @@
         OPT   PAG
 
-        LIB   RRF              ;USE EUGENES FRED +
+        LIB   "src/RRF.ASM"              ;USE EUGENES FRED +
 
 HORIZ   EQU   $CA06
 DEST    EQU   $CA04

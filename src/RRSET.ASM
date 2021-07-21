@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRFRED
+        LIB   "src/RRFRED.ASM"
         OPT   LIS
 
         ORG   SETORG           ;SET US HERE
@@ -415,7 +415,7 @@ TAB57Z  FDB   D0
         FDB   DM
         FDB   DN
         FDB   DO
-        FDB   DP
+        FDB   DPP
         FDB   DQ
         FDB   DR
         FDB   DS
@@ -688,7 +688,7 @@ DO      FCB   5
         FCB   $60,$00,$60
         FCB   $66,$66,$60
 
-DP      FCB   5
+DPP     FCB   5
         FCB   $66,$66,$60
         FCB   $60,$00,$60
         FCB   $66,$66,$60

@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  DIAGONAL EXPLOSIONS
 *

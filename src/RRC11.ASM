@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  C I R C L E S AND E N F O R C E R S
 *
@@ -478,7 +478,7 @@ CIRP6   FCB   8,15
 CIRP7   FCB   8,15
         FDB   CIRD7
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
         OPT   NOL
         ENDIF
 

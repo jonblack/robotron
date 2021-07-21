@@ -850,9 +850,9 @@ BCLEAR  PSHS  D,X
         JSR   BLKCLR           ;CLEAR OUT MESSAGE
         PULS  D,X,PC
 
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC.'
-        FCC   '  ALL RIGHTS RESERVED.'
-        FCC   '  "ROBOTRON: 2084"  '
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC."
+        FCC   "  ALL RIGHTS RESERVED."
+        FCC   "  \"ROBOTRON: 2084\"  "
 
 
 SPACE   EQU   $3A
@@ -865,52 +865,52 @@ LPAREN  EQU   $5B
 RPAREN  EQU   $5C
 
 HISTO   FCB   CLEARM,TOP+$18,$80,COLOR,$DD
-        FCC   'INSPIRED BY HIS NEVER ENDING'
+        FCC   "INSPIRED BY HIS NEVER ENDING"
         FCB   NEWLIN
-        FCC   'QUEST FOR PROGRESS'
+        FCC   "QUEST FOR PROGRESS"
         FCB   COMMA,NEWLIN
-        FCC   'IN '
+        FCC   "IN "
         FCB   COLOR,$AA
-        FCC   '2084'
+        FCC   "2084"
         FCB   COLOR,$DD
-        FCC   ' MAN PERFECTS THE '
+        FCC   " MAN PERFECTS THE "
         FCB   COLOR,$AA
-        FCC   'ROBOTRONS'
+        FCC   "ROBOTRONS"
         FCB   COLON,SNOOZE,$20,NEWLIN,NEWLIN,COLOR,$FF
-        FCC   'A ROBOT SPECIES SO ADVANCED THAT'
+        FCC   "A ROBOT SPECIES SO ADVANCED THAT"
         FCB   NEWLIN
-        FCC   'MAN IS INFERIOR TO HIS OWN CREATION'
+        FCC   "MAN IS INFERIOR TO HIS OWN CREATION"
         FCB   PERIOD,NEWLIN,NEWLIN,SNOOZE,$20,COLOR,$DD
-        FCC   'GUIDED BY THEIR INFALLIBLE LOGIC'
+        FCC   "GUIDED BY THEIR INFALLIBLE LOGIC"
         FCB   COMMA,NEWLIN
-        FCC   'THE '
+        FCC   "THE "
         FCB   COLOR,$AA
-        FCC   'ROBOTRONS'
+        FCC   "ROBOTRONS"
         FCB   COLOR,$DD
-        FCC   ' CONCLUDE'
+        FCC   " CONCLUDE"
         FCB   COLON,NEWLIN,NEWLIN,SNOOZE,$30,COLOR,$AA
-        FCC   'THE HUMAN RACE IS INEFFICIENT'
+        FCC   "THE HUMAN RACE IS INEFFICIENT"
         FCB   COMMA,NEWLIN
-        FCC   'AND THEREFORE MUST BE DESTROYED'
+        FCC   "AND THEREFORE MUST BE DESTROYED"
         FCB   PERIOD,$70,CLEARM,TOP+$16,$C0,COLOR,$DD
         FCB   SCRPT
         FDB   PLAYRR
-        FCC   'YOU ARE THE LAST HOPE OF MANKIND'
+        FCC   "YOU ARE THE LAST HOPE OF MANKIND"
         FCB   PERIOD,NEWLIN,NEWLIN,$60,COLOR,$FF
-        FCC   'DUE TO A GENETIC ENGINEERING ERROR'
+        FCC   "DUE TO A GENETIC ENGINEERING ERROR"
         FCB   COMMA,NEWLIN
-        FCC   'YOU POSSESS'
-        FCC   ' SUPERHUMAN'
-        FCC   ' POWERS'
+        FCC   "YOU POSSESS"
+        FCC   " SUPERHUMAN"
+        FCC   " POWERS"
         FCB   PERIOD,COLOR,$DD
         FCB   NEWLIN,NEWLIN
-        FCC   'YOUR MISSION IS TO'
+        FCC   "YOUR MISSION IS TO"
         FCB   COLOR,$AA
-        FCC   ' STOP THE ROBOTRONS'
+        FCC   " STOP THE ROBOTRONS"
         FCB   COMMA,NEWLIN,COLOR,$DD
-        FCC   'AND '
+        FCC   "AND "
         FCB   COLOR,$AA
-        FCC   'SAVE THE LAST HUMAN FAMILY'
+        FCC   "SAVE THE LAST HUMAN FAMILY"
         FCB   COLON,SCRPT
         FDB   FAMSCR
         FCB   SNOOZE,$20       ;CLEAR OUT
@@ -920,58 +920,58 @@ HISTO   FCB   CLEARM,TOP+$18,$80,COLOR,$DD
         FCB   $70,MESS,$10,NULMES
         FCB   $70
         FCB   CLEARM,TOP+$38,$80,COLOR,$33,GRUNTS
-        FCC   'THE FORCE OF GROUND ROVING'
+        FCC   "THE FORCE OF GROUND ROVING"
         FCB   NEWLIN
-        FCC   'UNIT NETWORK TERMINATOR '
+        FCC   "UNIT NETWORK TERMINATOR "
         FCB   NEWLIN,COLOR,$AA,MESS,$74,MGRUNT,LPAREN
 
-        FCC   'GRUNT'
+        FCC   "GRUNT"
         FCB   RPAREN,SPACE
-        FCC   'ROBOTRONS'
+        FCC   "ROBOTRONS"
         FCB   COLOR,$33
-        FCC   ' SEEK TO'
+        FCC   " SEEK TO"
         FCB   NEWLIN
-        FCC   'DESTROY YOU'
+        FCC   "DESTROY YOU"
         FCB   PERIOD,$FF
         FCB   CLEARM,TOP+$38,$80,COLOR,$55,SCRPT
         FDB   SCHULK           ;START THE HULK
-        FCC   'THE'
+        FCC   "THE"
         FCB   COLOR,$AA
         FCB   MESS,LEFT,MHULK
-        FCC   ' HULK ROBOTRONS '
+        FCC   " HULK ROBOTRONS "
         FCB   COLOR,$55
-        FCC   'SEEK OUT'
+        FCC   "SEEK OUT"
         FCB   NEWLIN
-        FCC   'AND ELIMINATE THE LAST HUMAN FAMILY'
+        FCC   "AND ELIMINATE THE LAST HUMAN FAMILY"
         FCB   PERIOD,$F9
         FCB   MESS,LEFT,NULMES
         FCB   $80
         FCB   CLEARM,TOP+$50,$80,COLOR,$DD,SCRPT
         FDB   SCSC
-        FCC   'THE'
+        FCC   "THE"
         FCB   COLOR,$AA
         FCB   MESS,$2C,MSPCU
-        FCC   ' SPHEREOIDS AND QUARKS  '
+        FCC   " SPHEREOIDS AND QUARKS  "
         FCB   COLOR,$DD,NEWLIN
-        FCC   'ARE PROGRAMMED TO MANUFACTURE'
+        FCC   "ARE PROGRAMMED TO MANUFACTURE"
         FCB   NEWLIN,COLOR,$AA,MESS,$33,MENTK
 
-        FCC   'ENFORCER AND TANK ROBOTRONS'
+        FCC   "ENFORCER AND TANK ROBOTRONS"
         FCB   PERIOD           ;ENFORCER AND TANK MESS
         FCB   $A0,MESS,$10,NULMES
         FCB   CLEARM,TOP+$38,$80,COLOR,$FF
-        FCC   'BEWARE OF THE INGENIOUS'
+        FCC   "BEWARE OF THE INGENIOUS"
         FCB   NEWLIN,COLOR,$AA,MESS,$20,MBRAIN
-        FCC   'BRAIN ROBOTRONS'
+        FCC   "BRAIN ROBOTRONS"
         FCB   COLOR,$FF
-        FCC   ' THAT POSSESS'
+        FCC   " THAT POSSESS"
         FCB   NEWLIN
-        FCC   'THE POWER TO REPROGRAM'
+        FCC   "THE POWER TO REPROGRAM"
         FCB   NEWLIN
-        FCC   'HUMANS'
-        FCC   ' INTO SINISTER '
+        FCC   "HUMANS"
+        FCC   " INTO SINISTER "
         FCB   COLOR,$AA
-        FCC   'PROGS'
+        FCC   "PROGS"
         FCB   PERIOD,$73,MESS,$2C,MPROG,$80,SCRPT
         FDB   POSTER
         FCB   CLEARM,TOP+$44,$80
@@ -979,16 +979,16 @@ HISTO   FCB   CLEARM,TOP+$18,$80,COLOR,$DD
         FCB   MESS,$10,NULMES  ;CLEAR OUT PROG BEFORE BRAIN EXPS
         FCB   SNOOZE,$40
         FCB   COLOR,$DD
-        FCC   'AS YOU STRUGGLE TO SAVE'
+        FCC   "AS YOU STRUGGLE TO SAVE"
         FCB   NEWLIN
-        FCC   'HUMANITY'
+        FCC   "HUMANITY"
         FCB   COMMA
-        FCC   ' BE SURE TO AVOID'
+        FCC   " BE SURE TO AVOID"
         FCB   NEWLIN
         FCB   COLOR,$AA
-        FCC   'ELECTRODES'
+        FCC   "ELECTRODES"
         FCB   COLOR,$DD
-        FCC   ' IN YOUR PATH'
+        FCC   " IN YOUR PATH"
         FCB   PERIOD
         FCB   $D0,$AD,DONE
 

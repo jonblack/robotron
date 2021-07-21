@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  T A N K ........
         ORG   RTKORG
@@ -229,7 +229,7 @@ TNKDP1  ADDD  #$0206           ;OFFSET
         JSR   DMAON            ;ON YOUR TANKS
         PULS  X,Y,D,U,PC
 
-        FCC   ' (C) WILLIAMS ELECTRONICS INC. '
+        FCC   " (C) WILLIAMS ELECTRONICS INC. "
 *
 *START A TANK
 *PD=OBJ,PD4=DX,DY,PD6=SHOT TIMR,PD7=ND TIMR
@@ -688,7 +688,7 @@ SQP7    FCB   8,15
 SQP8    FCB   8,15
         FDB   SQD8
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
         OPT   NOL
         ENDIF
 

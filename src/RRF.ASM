@@ -692,26 +692,26 @@ OMESUM  RMB   2
 *M A C R O S
 *
 NAP     MACRO
-        LDA   #&1              ;TIME
-        LDX   #&2              ;WAKEUP ADDR
+        LDA   #\1              ;TIME
+        LDX   #\2              ;WAKEUP ADDR
         JMP   SLEEP
         ENDM 
 *
 *MAKE A NEW PROCESS
 *
 NEWP    MACRO
-        LDX   #&1              ;ADDR
-        LDA   #&2              ;TYPE
+        LDX   #\1              ;ADDR
+        LDA   #\2              ;TYPE
         JSR   MKPROC
         ENDM 
 *INIT PROCESS \0=SADDR
 MAKP    MACRO
         JSR   MAKEP
-        FDB   &1
+        FDB   \1
         ENDM 
 *MAKE A PROCESS AND OBJECT
 MKPROB  MACRO
         JSR   MPROB
-        FDB   &1,&2,&3
+        FDB   \1,\2,\3
         ENDM 
 

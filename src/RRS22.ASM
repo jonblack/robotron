@@ -1,13 +1,13 @@
         STTL  ROBOT OPERATING SYSTEM
 
-        IFNC  &A,NOL
+        IF    NOL             ;Fixme was: IFNC  &A,NOL
 
-        LIB   RRF
+        LIB   "src/RRF.ASM"
 
         ELSE 
 
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
 
         ENDIF
@@ -610,9 +610,9 @@ CSCX    RTS
 *COIN SWITCH TABLE
 CSWTAB  FDB   0,ADVSW,RCOIN,HSBUTV,LCOIN,CCOIN,0,0
 
-        FCC   ' ROBOTRON: 2084 (TM) '
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. '
-        FCC   ' ALL RIGHTS RESERVED '
+        FCC   " ROBOTRON: 2084 (TM) "
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. "
+        FCC   " ALL RIGHTS RESERVED "
 
 *
 *SWITCH YOUR SCREEN
@@ -1792,7 +1792,7 @@ ASC1    ORB   A,U
         CMPA  -$4112,X         ;GET HIDDEN GUY
         BEQ   NOZAPP
 
-        IFNC  &A,NO
+        IF    1               ;Fixme was:IFNC  &A,NO
         LDA   LSEED            ;SEE IF TIME TO
         CMPA  #1
         BHI   NOZAPP           ;NOT THIS TIME
@@ -1839,9 +1839,9 @@ RWM1    LDB   ,X
         STA   RWCNTL
         PULS  X,D,Y,PC
 
-        FCC   ' ROBOTRON: 2084 (TM) '
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. '
-        FCC   '  ALL RIGHTS RESERVED'
+        FCC   " ROBOTRON: 2084 (TM) "
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. "
+        FCC   "  ALL RIGHTS RESERVED"
 *
 *VECTORS
 *

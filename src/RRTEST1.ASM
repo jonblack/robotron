@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRFRED
+        LIB   "src/RRFRED.ASM"
         OPT   LIS
 *
         ORG   RAMALS
@@ -101,7 +101,7 @@ TEMP2   RMB   1
         FDB   L2V
         FDB   L0V
 
-        LIB   RRHX4
+        LIB   "src/RRHX4.ASM"
 
 *
 *** POWER UP ROUTINE
@@ -845,5 +845,5 @@ SPHTAB  FCB   SWMES1,0,SWMH    ;AUTO UP
         FCB   0,0,0            ;UNUSED
         FCB   0,0,0            ;UNUSED
 
-        LIB   RRTEST2          ;INCLUDE SECOND HALF
+        LIB   "src/RRTEST2.ASM"          ;INCLUDE SECOND HALF
 

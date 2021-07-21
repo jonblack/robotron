@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRFRED
+        LIB   "src/RRFRED.ASM"
         OPT   LIS
 
         ORG   RAMALS           ;USE SAM RAM FOR STORAGE
@@ -71,7 +71,8 @@ DEFALT  FCB   $25              ;REPLAY @10,000
         FCB   $00              ;CUNITB
         FCB   $00              ;MINUNT
         FCB   $01              ;"GAME WORKS = 0" ADJUSTMENT
-        FCB   $02              ;GA1 MASTER DIFFICULTY
+        ;Changed from $02 to $03 match robotron.sb7
+        FCB   $03              ;GA1 MASTER DIFFICULTY
         FCB   $03              ;GA2 NUMBER OF LETTERS FOR GOD
         FCB   0                ;FACTORY SETTINGS
         FCB   0                ;CLEAR AUDIT TOTALS
@@ -80,9 +81,9 @@ DEFALT  FCB   $25              ;REPLAY @10,000
         FCB   0                ;ENTER OPERATOR MESSAGE
         FCB   0                ;ENTER HSTD
 DEFSIZ  EQU   *-DEFALT
-OPD1    FCC   '     PRESENTED BY'
-        FCC   '        '       ;SPACES AFTER PRESENTED BY
-OPD2    FCC   'WILLIAMS ELECTRONICS INC'
+OPD1    FCC   "     PRESENTED BY"
+        FCC   "        "       ;SPACES AFTER PRESENTED BY
+OPD2    FCC   "WILLIAMS ELECTRONICS INC"
         FCB   $3D              ;PERIOD
         FCB   $2F,$28
 *

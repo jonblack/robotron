@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  BRAINS & CO.
         ORG   BRNORG
@@ -26,7 +26,8 @@ BRNSTV  CLR   BRNFLG
         PSHS  A
         BEQ   BRNSTX           ;NONE HOME
 
-        IFNC  &A,NO
+        IF    1               ;Fixme was:IFNC  &A,NO
+
 
         LDB   BRNFLG
         LDY   #$D015
@@ -797,7 +798,7 @@ BRUP2   FCB   7,16
 BRUP3   FCB   7,16
         FDB   BRUD3
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
         OPT   NOL
         ENDIF
 

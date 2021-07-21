@@ -1,7 +1,7 @@
         OPT   NOL
-        LIB   RRFRED
+        LIB   "src/RRFRED.ASM"
 
-        IFNC  &A,NOL
+        IF    NOL             ;Fixme was: IFNC  &A,NOL
         OPT   LIS
         ENDIF
 
@@ -258,14 +258,14 @@ COLTAB  FCB   $FF,$C0,$C7,$1F,$7
 
 HISTRY  EQU   *
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
 
         OPT   LIS
-        LIB   RRSCRIPT
+        LIB   "src/RRSCRIPT.ASM"
         OPT   NOL
 
         ELSE 
-        LIB   RRSCRIPT
+        LIB   "src/RRSCRIPT.ASM"
 
         ENDIF
 
@@ -347,9 +347,9 @@ LINO2   LDX   PD+3,U
         BNE   LINO1
         JMP   [PD,U]
 
-        FCC   ' ROBOTRON: 2084 '
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. '
-        FCC   ' ALL RIGHTS RESERVED '
+        FCC   " ROBOTRON: 2084 "
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. "
+        FCC   " ALL RIGHTS RESERVED "
 
 WILSUB  JSR   FINIT            ;FIRST TWO LOCATIONS FOR INITIAL MOVE
         LDY   #ARAM1
@@ -586,6 +586,6 @@ LCTAB   FCB   $7               ;RED
         FCB   $1F              ;ORANGE
         FCB   $3F              ;YELLOW
 
-        LIB   RRLOGD
+        LIB   "src/RRLOGD.ASM"
 
         END  

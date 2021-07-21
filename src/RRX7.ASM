@@ -1,7 +1,7 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
-        STTL  EXPLOSIONS       ;& APPEARS
+        STTL  EXPLOSIONS & APPEARS
 *
 *EXPLOSION DATA STRUCTURE
 *
@@ -207,7 +207,7 @@ CCONT   LDY   #HCK2+1331
         EORB  #$4
         STD   DMAWH,U          ;FORMED
 
-        IFNC  &A,NO
+        IF    1               ;Fixme was:IFNC  &A,NO
 
         LDA   STATUS
         BMI   NOCKK            ;NOT IN GAME OVER!
@@ -284,9 +284,9 @@ KILEX1  LDD   ,Y               ;GET GUY WE POINT AT
         LEAY  ,U               ;RETURN GUY BEFORE US TO WALK FROM
         RTS                    
 
-        FCC   ' ROBOTRON: 2084 '
-        FCC   ' COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. '
-        FCC   ' ALL RIGHTS RESERVED '
+        FCC   " ROBOTRON: 2084 "
+        FCC   " COPYRIGHT 1982 WILLIAMS ELECTRONICS INC. "
+        FCC   " ALL RIGHTS RESERVED "
 
 *
 *APPEAR WRITE

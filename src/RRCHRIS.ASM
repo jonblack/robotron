@@ -10,7 +10,7 @@
 **************************************************************************
 
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
 
         STTL  DIAGONAL EXPLOSIONS
@@ -56,7 +56,7 @@ TROIS   DEC   HITE
         INC   YYCNT
         JMP   $49E6
 
-        FCC   '05/1987 CHR.G.'
+        FCC   "05/1987 CHR.G."
 
         ORG   $4AD7
 * FCB $FD THIS SETS JAP ZAPPER CORRECT

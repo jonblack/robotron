@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRFRED           ;INCLUDE THE TEMP GUY
+        LIB   "src/RRFRED.ASM"           ;INCLUDE THE TEMP GUY
         OPT   LIS
 
 * SPECIAL CHARACTER NAMES
@@ -350,7 +350,7 @@ WORD57  CLR   TXFLAV
 WRD571  STB   TXFONT
         CLR   TXCLIP           ;KILL ANY CLIPPING AT START OF MESSAGE
 
-        IFNC  &A,NO
+        IF    1               ;Fixme was:IFNC  &A,NO
 
 WORDZ   PSHS  U,A
         LDU   #HCK1+88
@@ -544,7 +544,7 @@ SUBBER  LEAS  -8,S
 SUBRET  TFR   U,Y
         RTS  
 
-        LIB   RRET
+        LIB   "src/RRET.ASM"
 
         END  
 

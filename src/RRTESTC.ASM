@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRFRED
+        LIB   "src/RRFRED.ASM"
         OPT   LIS
 
         ORG   TSCORG           ;PLACE TO RUN FROM
@@ -68,88 +68,88 @@ RESHS1  JSR   MKSCCK
         LDA   #HSRESM          ;SAY THAT THEY WERE RESET
         JMP   WRD7V            ;AND RETURN
 
-DEFHSR  FCC   'BIL'
-DEFGOD  FCC   'WILLY'
+DEFHSR  FCC   "BIL"
+DEFGOD  FCC   "WILLY"
         FCB   $3A
-        FCC   'ELKTRIX'
+        FCC   "ELKTRIX"
         FCB   $3A,$3A,$3A,$3A,$3A,$3A,$3A
         FCB   $00,$15,$17,$82
-        FCC   'VID'
+        FCC   "VID"
         FCB   $00,$12,$21,$45
-        FCC   'KID'
+        FCC   "KID"
         FCB   $00,$12,$21,$35
-TODTAB  FCC   'DRJ'
+TODTAB  FCC   "DRJ"
         FCB   $00,$05,$21,$27
-        FCC   'LED'
+        FCC   "LED"
         FCB   $00,$05,$02,$18
-        FCC   'EPJ'
+        FCC   "EPJ"
         FCB   $00,$04,$12,$55
-        FCC   'JER'
+        FCC   "JER"
         FCB   $00,$04,$12,$50
-        FCC   'KID'
+        FCC   "KID"
         FCB   $00,$03,$19,$20
-        FCC   'MLG'
+        FCC   "MLG"
         FCB   $00,$03,$19,$19
-        FCC   'SSR'
+        FCC   "SSR"
         FCB   $00,$02,$66,$45
-        FCC   'UNA'
+        FCC   "UNA"
         FCB   $00,$02,$66,$35
-        FCC   'JRS'
+        FCC   "JRS"
         FCB   $00,$02,$52,$50
-        FCC   'CJM'
+        FCC   "CJM"
         FCB   $00,$02,$41,$10
-ENDTOD  FCC   'KJF'
+ENDTOD  FCC   "KJF"
         FCB   $00,$02,$30,$20
-        FCC   'MRS'
+        FCC   "MRS"
         FCB   $00,$02,$20,$35
-        FCC   'PGD'
+        FCC   "PGD"
         FCB   $00,$02,$10,$90
-        FCC   'NJM'
+        FCC   "NJM"
         FCB   $00,$02,$09,$65
-        FCC   'NHD'
+        FCC   "NHD"
         FCB   $00,$02,$09,$60
 CDEFS1  EQU   *-DEFHSR
-DEFSC2  FCC   'DON'
+DEFSC2  FCC   "DON"
         FCB   $00,$01,$82,$80
-        FCC   'VIV'
+        FCC   "VIV"
         FCB   $00,$01,$82,$80
-        FCC   'GWW'
+        FCC   "GWW"
         FCB   $00,$01,$81,$05
-        FCC   'CRB'
+        FCC   "CRB"
         FCB   $00,$01,$80,$55
-        FCC   'MDR'
+        FCC   "MDR"
         FCB   $00,$01,$75,$65
-        FCC   'BAC'
+        FCC   "BAC"
         FCB   $00,$01,$72,$56
-        FCC   'W'
+        FCC   "W"
         FCB   $3A
-        FCC   'R'
+        FCC   "R"
         FCB   $00,$01,$70,$70
-        FCC   'MPT'
+        FCC   "MPT"
         FCB   $00,$01,$60,$60
-        FCC   'SUE'
+        FCC   "SUE"
         FCB   $00,$01,$55,$20
-        FCC   'MOM'
+        FCC   "MOM"
         FCB   $00,$01,$44,$80
-        FCC   'DAD'
+        FCC   "DAD"
         FCB   $00,$01,$44,$79
-        FCC   'SFD'
+        FCC   "SFD"
         FCB   $00,$01,$44,$78
-        FCC   'AKD'
+        FCC   "AKD"
         FCB   $00,$01,$44,$77
-        FCC   'CWK'
+        FCC   "CWK"
         FCB   $00,$01,$33,$30
-        FCC   'TMH'
+        FCC   "TMH"
         FCB   $00,$01,$32,$70
-        FCC   'EJS'
+        FCC   "EJS"
         FCB   $00,$01,$31,$20
-        FCC   'RAY'
+        FCC   "RAY"
         FCB   $00,$01,$30,$65
-        FCC   'GAY'
+        FCC   "GAY"
         FCB   $00,$01,$29,$65
-        FCC   'RKM'
+        FCC   "RKM"
         FCB   $00,$01,$28,$55
-        FCC   'CNS'
+        FCC   "CNS"
         FCB   $00,$01,$27,$55
 *
 CDEFS2  EQU   *-DEFSC2         ;LENGTH OF TABLE
@@ -581,9 +581,10 @@ ALCK1   BSR   CMPSCR
 
 CMPSCR  PSHS  Y,X,D
         EXG   X,Y              ;MAKE X POINT AT CMOS
-        LDB   ,Y               ;TAKE AWAY PLAYERS 10 MILLIONS
-        ANDB  #$F
-        STB   ,Y
+        ;Commented out to match robotron.sbb
+        ;LDB   ,Y               ;TAKE AWAY PLAYERS 10 MILLIONS
+        ;ANDB  #$F
+        ;STB   ,Y
         LDB   #4               ;4 BYTES THROUGH
 CMPSC1  JSR   RCMOSA           ;READ A BYTE
         CMPB  #4               ;FIRST TIME THROUGH??

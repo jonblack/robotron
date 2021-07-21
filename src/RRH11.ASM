@@ -1,6 +1,6 @@
         STTL  H U M A N S AND H U L K S
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
 *
 *VECTORS
@@ -620,7 +620,7 @@ P5000D  EQU   *
         FDB   $000A,$E0E0,$E0E0
         FDB   $0AAA,$EEEE,$EEE0
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
         OPT   NOL
         ENDIF
 

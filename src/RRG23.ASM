@@ -1,6 +1,6 @@
         STTL  ROBOT GAME
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         ORG   RGORG
         JMP   PLAYRV
@@ -207,7 +207,7 @@ HIDLP   LDA   ,U+
         BRA   HIDLP
 HIDEND  JMP   GEXEC
 
-        FCC   ' (C) 1982 WILLIAMS ELECTRONICS INC. '
+        FCC   " (C) 1982 WILLIAMS ELECTRONICS INC. "
 *
 *MAKE YOUR ROBOTS APPEAR
 *PD=CNT,PD2=PTR,PD4=REFPTR,PD6=REF LIM

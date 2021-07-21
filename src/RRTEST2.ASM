@@ -682,26 +682,28 @@ ROMDUN  JMP   ,Y               ;ALL ROMS OK...RETURN.
 * ROMTAB - THIS TABLE INDICATES THE BASE OF THE PART, AND THE
 * RESULTING SUM. IF SUM=0 THEN PART IS NOT STUFFED.
 
-ROMTAB  FCB   $00,0            ;0000
-        FCB   $10,0            ;1000
-        FCB   $20,0            ;2000
-        FCB   $30,0            ;3000
-        FCB   $40,0            ;4000
-        FCB   $50,0            ;5000
-        FCB   $60,0            ;6000
-        FCB   $70,0            ;7000
-        FCB   $80,0            ;8000
-        FCB   $90,0            ;9000
-        FCB   $A0,0            ;A000
-        FCB   $B0,0            ;B000
-        FCB   $C0,0            ;C000
-        FCB   $D0,0            ;D000
-        FCB   $E0,0            ;E000
-        FCB   $F0,0            ;F000
-ROMEND  FCB   0
-        FCB   0                ;CHECK BYTE (FUDGER) FOR THIS PART ($F000)
+* Values added here to match the bluelabel binary.
 
-        FCC   '(C)1982 WILLIAMS ELEC.INC'
+ROMTAB  FCB   $00,$73          ;0000
+        FCB   $10,$EA          ;1000
+        FCB   $20,$1A          ;2000
+        FCB   $30,$6C          ;3000
+        FCB   $40,$B3          ;4000
+        FCB   $50,$23          ;5000
+        FCB   $60,$A3          ;6000
+        FCB   $70,$3B          ;7000
+        FCB   $80,$63          ;8000
+        FCB   $90,$00          ;9000
+        FCB   $A0,$00          ;A000
+        FCB   $B0,$00          ;B000
+        FCB   $C0,$00          ;C000
+        FCB   $D0,$5C          ;D000
+        FCB   $E0,$82          ;E000
+        FCB   $F0,$01          ;F000
+ROMEND  FCB   0
+        FCB   $3D              ;CHECK BYTE (FUDGER) FOR THIS PART ($F000)
+
+        FCC   "(C)1982 WILLIAMS ELEC.INC"
 
         ORG   $FFF0
         FDB   PWRUPV,PWRUPV,PWRUPV,PWRUPV

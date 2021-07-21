@@ -1,5 +1,5 @@
         OPT   NOL
-        LIB   RRF
+        LIB   "src/RRF.ASM"
         OPT   LIS
         STTL  ROBOTS AND POSTS
         ORG   RPORG
@@ -383,7 +383,7 @@ PSP3I   FCB   5,10
         FDB   PSD3I
         FCB   2,0
 
-        IFC   &A,NOL
+        IF    NOL         ;Fixme was: IFC   &A,NOL
         OPT   NOL
         ENDIF
 *STAR PICTS
