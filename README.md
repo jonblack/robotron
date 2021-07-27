@@ -17,6 +17,7 @@ the game in an emulator such as [MAME](https://www.mamedev.org/release.html).
 * [Play Robotron:2084](#play-robotron2084)
 * [About the source code](#about-the-source-code)
   * [Changes Required](#changes-required)
+* [The Blue Label ROMs](#the-blue-label-roms)
 
 <!-- vim-markdown-toc -->
 ## Build Instructions
@@ -82,4 +83,31 @@ To avoid more substantial changes I [forked
 instructions from the older 6800 instruction set along with a few other things
 that the assembler used by Eugene Jarvis and his team allowed.
 
+## The Blue Label ROMs
+When you run `make bluelabel` you create the following files in the `bluelabel` directory:
 
+```sh
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb1
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb2
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb3
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb4
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb5
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb6
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb7
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb8
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sb9
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sba
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sbb
+-rw-rw-r--  1 robert robert 4096 Jul 27 21:00 robotron.sbc
+```
+
+Each of these is a 4K file that was burned to ROM chips in the arcade game's ROM board. [This copy of the 1982 owner's manual](https://www.robotron-2084.co.uk/manuals/robotron/robotron_upright_instruction_manual_mar_82.pdf) contains a manifest
+of these ROM chips:
+
+<img src="https://user-images.githubusercontent.com/58846/127220091-0d0159af-a232-48db-8de8-c733094402f9.png">
+
+This picture of an actual Roboton ROM board shows you where each ROM chip lives. You can see why this version was known as 'blue label': the labels on each chip are light blue. Each label tells you which ROM file the chip contained:
+
+<img src="images/robotronromboard.jpg">
+
+`robotron.sb1` was loaded to the the chip labelled '2084 ROM 1-B' in the bottom left hand corner, and then so on up to '2084 ROM 12-B' in the top left hand corner which container `robotron.sbc`.
