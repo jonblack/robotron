@@ -110,4 +110,4 @@ This picture of an actual Roboton ROM board shows you where each ROM chip lives.
 
 <img src="images/robotronromboard.jpg">
 
-`robotron.sb1` was loaded to the the chip labelled '2084 ROM 1-B' in the bottom left hand corner, and then so on up to '2084 ROM 12-B' in the top left hand corner which container `robotron.sbc`.
+`robotron.sb1` was loaded to the the chip labelled '2084 ROM 1-B' in the bottom left hand corner, and then so on up to '2084 ROM 12-B' in the top left hand corner which contained `robotron.sbc`.
