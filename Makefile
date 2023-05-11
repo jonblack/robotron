@@ -9,7 +9,9 @@ OBJ=RRTABLE.o RRX7.o RRG23.o RRB10.o RRC11.o RRDX2.o RRLOG.o\
 		RRH11.o RRTEST1.o RRM1.o RRP8.o RRS22.o RRSET.o RRT2.o\
 		RRTESTB.o RRTESTC.o RRTEXT.o RRTK4.o  RRELESE6.o bluelabel.o
 
-all: clean 
+$(shell mkdir -p $(DIRS))
+
+all: clean bluelabel 
 
 %.o: src/%.ASM
 	$(ASM6809) -B -l $<.lst -o bin/$@ src/polyfill.asm $<
